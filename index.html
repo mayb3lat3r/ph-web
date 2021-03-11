@@ -7,9 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="shortcut icon" href="/img/icon/favicon.ico" type="image/x-icon">
     <title>PS</title>
 </head>
-<body scroll="no">
+<body>
 <div class="wrapper">
     <div class="toolbar">
         <span class="material-icons md-light" id="logotype">camera_alt</span>
@@ -17,7 +18,7 @@
         <div class="tools-list">
             <a href="#" class="tools-list__item">File</a>
             <a href="#" class="tools-list__item">Edit</a>
-            <a href="#" class="tools-list__item">Image</a>
+            <a href="#" id="image-button" class="tools-list__item">Image</a>
             <a href="#" class="tools-list__item">Layers</a>
             <a href="#" class="tools-list__item">Text</a>
             <a href="#" class="tools-list__item">Excretion</a>
@@ -25,57 +26,64 @@
         </div>
     </div>
 
+
+    <input class="image-url" type="text" placeholder="url...">
+
+
     <div class="edit-space">
         <div class="image">
-            <img src="https://media.publika.md/ru/image/201805/w720/1920x1080_mlechnyij-put-zvezdyi-milky-way_29253400.jpg"
+            <img id="image"
+                 src=""
                  alt="">
         </div>
 
         <div class="options">
             <div class="options__item">
                 <div class="options__title">Blur</div>
-                <input type="range" id="blur" value="0" min="0" max="100">
+                <input type="range" id="blur" value="0" min="0" max="10" step="0.5">
             </div>
 
             <div class="options__item">
                 <div class="options__title">Brightness</div>
-                <input type="range" id="brightness" value="0" min="0" max="100">
+                <input type="range" id="brightness" value="1" min="0" max="5" step="0.05">
             </div>
 
             <div class="options__item">
                 <div class="options__title">Contrast</div>
-                <input type="range" id="contrast" value="0" min="0" max="1000">
+                <input type="range" id="contrast" value="100" min="0" max="300" step="1">
             </div>
 
             <div class="options__item">
                 <div class="options__title">Grayscale</div>
-                <input type="range" id="grayscale" value="0" min="0" max="100">
+                <input type="range" id="grayscale" value="0" min="0" max="100" step="1">
             </div>
 
             <div class="options__item">
-                <div class="options__title">Rotate</div>
-                <input type="range" id="hue-rotate" value="0" min="0" max="360">
+                <div class="options__title">Hue</div>
+                <input type="range" id="hue-rotate" value="0" min="0" max="360" step="1">
             </div>
 
             <div class="options__item">
                 <div class="options__title">Invert</div>
-                <input type="range" id="invert" value="0" min="0" max="100">
+                <input type="range" id="invert" value="0" min="0" max="100" step="1">
             </div>
 
             <div class="options__item">
                 <div class="options__title">Opacity</div>
-                <input type="range" id="opacity" value="0" min="0" max="100">
+                <input type="range" id="opacity" value="100" min="0" max="100" step="1">
             </div>
 
             <div class="options__item">
                 <div class="options__title">Saturate</div>
-                <input type="range" id="saturate" value="0" min="0" max="100">
+                <input type="range" id="saturate" value="100" min="0" max="100" step="1">
             </div>
 
             <div class="options__item">
                 <div class="options__title">Sepia</div>
-                <input type="range" id="sepia" value="0" min="0" max="100">
+                <input type="range" id="sepia" value="0" min="0" max="100" step="1">
             </div>
+
+            <div id="reset-button">Reset</div>
         </div>
     </div>
 </div>
